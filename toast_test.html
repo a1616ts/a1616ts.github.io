@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Toast Test</title>
+<!-- jquery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script>
+<!-- toastr -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js'></script>
+<script type="text/javascript">
+function showToast() {
+    toastr.options.timeOut = 200;
+    toastr.options.progressBar = true;
+    toastr.info("Catch me in the rye.")
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1>Toast Test</h1>
+</header>
+<article>
+<input type="button" value="Toast!" onclick="showToast()">
+</article>
+</body>
+</html>
