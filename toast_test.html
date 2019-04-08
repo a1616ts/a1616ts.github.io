@@ -19,6 +19,11 @@ function showToast() {
     toastr.info("The catcher in the rye.");
 }
 </script>
+<style>
+.button_wrapper{
+   text-align:center;
+}
+</style>
 </head>
 <body>
 
@@ -26,7 +31,9 @@ function showToast() {
 <h1>Toast Test</h1>
 </header>
 <article>
-<input type="button" value="Toast!" onclick="showToast()">
+<div class="button_wrapper">
+    <input type="button" value="Toast!" onclick="showToast()">
+</div>
 <br>
 <h3>Timeout</h3>
 <input id='timeout' type="number" value="5"> second
