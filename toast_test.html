@@ -10,14 +10,17 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js'></script>
 <script type="text/javascript">
 function showToast() {
-    timeout = document.getElementById('timeout').value;
-    timeout = (timeout < 1) ? 1 : timeout;
-    timeout *= 1000;
-    toastr.options.timeOut = timeout;
-    console.log(toastr.options.timeOut);
-    toastr.options.progressBar = true;
-    toastr.info("The catcher in the rye.");
+    location.href = './white.html'
 }
+// function showToast() {
+//     timeout = document.getElementById('timeout').value;
+//     timeout = (timeout < 1) ? 1 : timeout;
+//     timeout *= 1000;
+//     toastr.options.timeOut = timeout;
+//     console.log(toastr.options.timeOut);
+//     toastr.options.progressBar = true;
+//     toastr.info("The catcher in the rye.");
+// }
 </script>
 <style>
 .button_wrapper{
