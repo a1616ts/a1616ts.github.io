@@ -9,16 +9,25 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css' />
 <script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js'></script>
 <script type="text/javascript">
-    a = "The catcher in the rye.";
-// function showToast() {
-//     timeout = document.getElementById('timeout').value;
-//     timeout = (timeout < 1) ? 1 : timeout;
-//     timeout *= 1000;
-//     toastr.options.timeOut = timeout;
-//     console.log(toastr.options.timeOut);
-//     toastr.options.progressBar = true;
-//     toastr.info("The catcher in the rye.");
-// }
+
+function showToast() {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        if (this.readyState==4 && this.status==200) {
+            toastr.info(xhr.response);
+        }
+    };
+    xhr.responseType = 'json';
+    xhr.open('GET', 'https://script.googleusercontent.com/a/macros/autify.com/echo?user_content_key=vfJTDO6XZjusRirKfvAvp4QP9xPq88yWWSRaDWDjMronhilqqHWmV_oqWwT-IB0BUq4D4m0pmSftCQkFn4FonxkHjnwyfIybm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_nRPgeZU6HP812zsBHrLTGo5xQJLnggV4IEmaUorgRKEV9kSKHq-kGTrqtdAYLuXowjFbdk-penFq2dvP--2B9rebVLrm8z9oiTH0iQg7Z9tcy6pr-Oj0FQ&lib=MnvoGjjbdAP0krZD61qUpfcg_NuSgtBTI', true);
+    xhr.send();
+
+    timeout = document.getElementById('timeout').value;
+    timeout = (timeout < 1) ? 1 : timeout;
+    timeout *= 1000;
+    toastr.options.timeOut = timeout;
+    console.log(toastr.options.timeOut);
+    toastr.options.progressBar = true;
+}
 </script>
 <style>
 .button_wrapper{
